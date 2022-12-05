@@ -10,9 +10,6 @@ jobs:
     runs-on: self-hosted
     
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v1
-
       - name: Deploy the code to ec2-machine
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
