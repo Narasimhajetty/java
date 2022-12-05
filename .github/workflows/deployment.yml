@@ -26,15 +26,15 @@ jobs:
            cd /home/ec2-user
            mvn package
        
-  Build:
-    # name: Building the code
-    # runs-on: self-hosted   
+  # Build:
+  #   # name: Building the code
+  #   # runs-on: self-hosted   
 
-    steps:
-      - uses: actions/checkout@v2
-      - run: |
-           echo "Building the jar file"
-           cd /home/ec2-user/nsdl_pan_wrapper
-           mvn package
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - run: |
+  #          echo "Building the jar file"
+  #          cd /home/ec2-user/nsdl_pan_wrapper
+  #          mvn package
 
         
