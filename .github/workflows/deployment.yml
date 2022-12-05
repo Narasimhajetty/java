@@ -27,8 +27,8 @@ jobs:
            mvn package
        
   Build:
-    name: Building the code
-    runs-on: self-hosted   
+    # name: Building the code
+    # runs-on: self-hosted   
 
     steps:
       - uses: actions/checkout@v2
