@@ -11,6 +11,7 @@ jobs:
     
     steps:
       - name: Deploy the code to ec2-machine
+        uses: actions/checkout@v1
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
@@ -18,8 +19,6 @@ jobs:
           REMOTE_HOST: "ec2-65-0-125-86.ap-south-1.compute.amazonaws.com"
           REMOTE_USER: "ec2-user"
           TARGET: "/home/ec2-user"
-
-        uses: actions/checkout@v1
         - run: |
            echo "Building the jar file"
            cd /home/ec2-user
