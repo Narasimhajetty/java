@@ -5,12 +5,16 @@ on:
     branches: [ develop ]
 
 jobs:
-  build:
-    name: Deploy the code to ec2
-    uses: actions/checkout@v1
+  deploy:
+    name: Push to EC2 Instance
     runs-on: self-hosted
+
     steps:
-      - uses: easingthemes/ssh-deploy@v2.1.5
+      - name: Checkout the code
+        uses: actions/checkout@v1
+
+      - name: Deploy to my EC2 instance
+        uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           SOURCE: "./nsdl_esign_wrapper"
