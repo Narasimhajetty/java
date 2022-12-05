@@ -2,7 +2,7 @@ name: Pipeline for NSDL E-Sign - Dev
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ main ]
 
 jobs:
   deploy:
