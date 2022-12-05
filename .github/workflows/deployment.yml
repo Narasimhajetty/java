@@ -7,11 +7,11 @@ on:
 jobs:
   build:
     name: Deploy the code to ec2
+    uses: actions/checkout@v1
     runs-on: self-hosted
     steps:
-      - name: Deploy the code to ec2-machine
-        uses: actions/checkout@v1
-        uses: easingthemes/ssh-deploy@v2.1.5
+      
+      - uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           SOURCE: "./nsdl_esign_wrapper"
