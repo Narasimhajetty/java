@@ -21,7 +21,4 @@ jobs:
           REMOTE_HOST: "ec2-65-0-125-86.ap-south-1.compute.amazonaws.com"
           REMOTE_USER: "ec2-user"
           TARGET: "/home/ec2-user"
-        - run: |
-           echo "Building the jar file"
-           cd /home/ec2-user
-           mvn package
+       
