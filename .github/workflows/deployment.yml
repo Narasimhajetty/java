@@ -17,7 +17,7 @@ jobs:
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          SOURCE: "./nsdl_esign_wrapper"
+          SOURCE: "./nsdl_pan_wrapper"
           REMOTE_HOST: "ec2-65-0-125-86.ap-south-1.compute.amazonaws.com"
           REMOTE_USER: "ec2-user"
           TARGET: "/home/ec2-user"
